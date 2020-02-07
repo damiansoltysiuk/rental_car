@@ -14,8 +14,8 @@ public class Test {
         Car car1 = new Car.Builder().registrationNumber("BS 61654").carConditionNote("Condition: OK").fuelLevel(1.0).mark(CarMark.CITROEN).productionYear(2005).carStatus(CarStatus.UNRESERVED).build();
         Car car2 = new Car.Builder().registrationNumber("BI 88688").carConditionNote("Condition: OK").fuelLevel(1.0).mark(CarMark.BMW).productionYear(2015).carStatus(CarStatus.UNRESERVED).build();
 
-        Model model1 = new Model.Builder().carType(CarType.MEDIUM_CAR).fotoDirectory("c4sc.pl/BS61654").generation("I").name("C4").equipmentVersionID(1).build();
-        Model model2 = new Model.Builder().carType(CarType.PREMIUM_CAR).fotoDirectory("syndykat.pl/BI88688").generation("F10").name("330i").equipmentVersionID(2).build();
+        Model model1 = new Model.Builder().carType(CarType.MEDIUM_CAR).fotoDirectory("c4sc.pl/BS61654").generation("I").name("C4").build();
+        Model model2 = new Model.Builder().carType(CarType.PREMIUM_CAR).fotoDirectory("syndykat.pl/BI88688").generation("F10").name("330i").build();
 
         EquipmentVersion equipmentVersion1 = new EquipmentVersion("Exlusive", "Full Option");
         EquipmentVersion equipmentVersion2 = new EquipmentVersion("Individual", "Premium+");

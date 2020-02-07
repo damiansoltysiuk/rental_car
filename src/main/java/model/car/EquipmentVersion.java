@@ -7,13 +7,16 @@ import javax.persistence.*;
 public class EquipmentVersion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "equipment_value_ID")
+    @Column(name = "equipment_version_ID")
     private Integer equipmentVersionID;
     @Column(name = "equipment_name", nullable = false)
     private String equipmentName;
     @Column(name = "description", nullable = false)
     private String equipmentDescription;
 
+
+    public EquipmentVersion() {
+    }
 
     public EquipmentVersion(String equipmentName, String equipmentDescription) {
         this.equipmentName = equipmentName;

@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
             resp.addCookie(loginCookie);
             resp.addCookie(passwordCookie);
         }
-        req.getRequestDispatcher("users").forward(req, resp);
+        req.getRequestDispatcher("index.jsp").forward(req, resp);
     }
 
     @Override

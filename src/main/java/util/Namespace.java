@@ -1,5 +1,8 @@
 package util;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Namespace {
     public static final String USER = "user";
     public static final String USER_LOGIN = "userLogin";
@@ -33,9 +36,29 @@ public class Namespace {
     public static final String ERROR_HEADER_USER_ROLE = "SELECT USER ROLE";
     public static final String ERROR_MESSAGE_USER_ROLE = "Please select existed user role";
 
+    public static final String ERROR_HEADER_CAR_REGISTRATION_NUMBER = "INVALID REGISTRATION NUMBER";
+    public static final String ERROR_MESSAGE_CAR_REGISTRATION_NUMBER = "Typed registration number is already in use";
+
     public static final String LOGIN_OR_PASSWORD_ERROR_HEADER = "Error";
     public static final String LOGIN_OR_PASSWORD_ERROR_MESSAGE = "Invalid login or password";
 
     public static final String CHECKBOX_CHECKED = "on";
     public static final String REMEMBER = "rememberUser";
+
+    public static final String CAR = "car";
+    public static final String CAR_ID = "carID";
+    public static final String CAR_FEATURE = "feature";
+    public static final String CAR_FEATURE_LIST = "featureList";
+    public static final String CAR_EQUIPMENT_VERSION = "equipmentVersion";
+    public static final String CAR_REGISTRATION_NUMBER = "registrationNumber";
+    public static final String CAR_MARK = "mark";
+    public static final String CAR_FUEL_LEVEL = "fuelLevel";
+    public static final String CAR_YEAR_PRODUCTION = "yearProduction";
+    public static final String CAR_STATUS = "carStatus";
+    public static final String CAR_CONDITION_NOTE = "carConditionNote";
+
+    public static final String CAR_MODEL = "model";
+    public static final String CAR_GENERATION = "generation";
+    public static final String CAR_PHOTO_DIRECTORY = "photo";
+    public static final String CAR_TYPE = "carType";
 }

@@ -9,6 +9,7 @@ import model.car.CarStatus;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -36,9 +37,14 @@ public class CarDAOImpl extends AbstractDAO implements CarDAO {
         car.setProductionYear(updateCar.getProductionYear());
         car.setCarConditionNote(updateCar.getCarConditionNote());
         car.setCarStatus(updateCar.getCarStatus());
+        car.setModel(updateCar.getModel());
         entityManager.merge(car);
         transaction.commit();
-        entityManager.close();
+    }
+
+    @Override
+    public List<Car> getCars() {
+        return hibernateUtil.getEntityManager().createQuery("SELECT c FROM Car c", Car.class).getResultList();
     }
 
     @Override

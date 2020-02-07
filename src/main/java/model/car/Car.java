@@ -18,7 +18,7 @@ public class Car {
     private Double fuelLevel;
     @Column(name = "production_year", nullable = false)
     private Integer productionYear;
-    @Column(name = "car_condition_note", nullable = false)
+    @Column(name = "car_condition_note", nullable = false, length = 500)
     private String carConditionNote;
     @Column(name = "car_status")
     @Enumerated(EnumType.STRING)

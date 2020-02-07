@@ -1,8 +1,8 @@
 package controller.servlet;
 
-import model.user.User;
-import service.UserManagementService;
-import service.impl.UserManagementServiceImpl;
+import model.car.Car;
+import service.CarManagementService;
+import service.impl.CarManagementServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,15 +10,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Set;
+import java.util.List;
 
-@WebServlet(name = "UserListServlet", urlPatterns = {"/users", "/userList"})
-public class UserListServlet extends HttpServlet {
-    UserManagementService userManagementService;
+@WebServlet(name = "CarListServlet", urlPatterns = "/carList")
+public class CarListServlet extends HttpServlet {
+    CarManagementService carManagementService;
 
     @Override
     public void init() throws ServletException {
-        userManagementService = new UserManagementServiceImpl();
+        carManagementService = new CarManagementServiceImpl();
     }
 
     @Override
@@ -28,8 +28,8 @@ public class UserListServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Set<User> users = userManagementService.getUsers();
-        req.setAttribute("users", users);
-        req.getRequestDispatcher("userList.jsp").forward(req, resp);
+        List<Car> cars = carManagementService.getCars();
+        req.setAttribute("cars", cars);
+        req.getRequestDispatcher("carList.jsp").forward(req,resp);
     }
 }
